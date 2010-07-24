@@ -1,2 +1,2 @@
-require 'hello'
+require 'yellowbrick'
 run Sinatra::Application

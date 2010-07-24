@@ -1,4 +1,6 @@
 source :gemcutter
 
-gem "sinatra"
-gem "xml-object"
+gem 'sinatra'
+gem 'mongo'
+gem 'bson'
+gem 'haml'
