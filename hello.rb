@@ -6,6 +6,6 @@ get '/' do
   "HELLO!"
 end
 
-post '/recieve' do
+post '/receive' do
   raise "That hurt! #{params[:from]} :-)"
 end
