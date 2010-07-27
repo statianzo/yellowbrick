@@ -10,9 +10,3 @@ post '/receive' do
   })
   article.save
 end
-
-def posts
-  db = mongo
-  db.collection("posts")
-end
-
