@@ -1,6 +1,5 @@
 source :gemcutter
 
 gem 'sinatra'
-gem 'mongo'
-gem 'bson'
+gem 'mongo_mapper'
 gem 'haml'

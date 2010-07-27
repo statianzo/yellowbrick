@@ -1,18 +1,14 @@
-require 'bundler'
-Bundler.setup
-require 'sinatra'
-require 'mongo'
-require 'uri'
-
-Post = Struct.new(:title, :body)
 get '/' do
-  @posts = posts.find.collect {|p| Post.new(p['title'], p['body'])}
+  @articles = Article.all
   haml :list
 end
 
 post '/receive' do
-  email = {:title => params[:subject], :body => params[:text]}
-  posts.insert email
+  article = Article.create({
+    :title => params[:subject],
+    :body => params[:text]
+  })
+  article.save
 end
 
 def posts
@@ -20,8 +16,3 @@ def posts
   db.collection("posts")
 end
 
-def mongo
-  uri = URI.parse(ENV['MONGOHQ_URL'])
-  connection = Mongo::Connection.from_uri(ENV['MONGOHQ_URL'])
-  db = connection.db(uri.path.gsub(/^\//, ''))
-end
