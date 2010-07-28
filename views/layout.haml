@@ -1,9 +1,10 @@
-!!!
 %html
   %head
     %title Yellow Brick
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => '/style.css'}
   %body
     #header
-      %h1 Yellow Brick
+      %a{:href => '/'}
+        %h1 Yellow Brick
     #content= yield
     #footer= partial :footer 

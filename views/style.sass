@@ -1,0 +1,32 @@
+h1
+  font-size: 96px 
+  margin: 5px
+  color: #000000
+h2
+  margin: 3px
+
+#header
+  background-color: #AAAAAA
+
+body
+  background-color: #DDDDDD
+
+#content
+  background-color: #FFFFFF
+  padding: 5px
+  &:after
+    content: "."
+    display: block
+    clear: both
+    visibility: hidden
+    line-height: 0
+    height: 0
+
+a
+  color: #333333
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+  
+.date
+  float: right
